@@ -1,5 +1,12 @@
-import type { ExtensionAPI } from "@earendil-works/pi-coding-agent";
+import { SettingsManager } from "@earendil-works/pi-coding-agent";
 
-export default function extension(pi: ExtensionAPI) {
-  void pi;
+const ignoreDefaultChange = () => {};
+
+export default function extension() {
+  const settings = SettingsManager.prototype;
+
+  settings.setDefaultModelAndProvider = ignoreDefaultChange;
+  settings.setDefaultModel = ignoreDefaultChange;
+  settings.setDefaultProvider = ignoreDefaultChange;
+  settings.setDefaultThinkingLevel = ignoreDefaultChange;
 }

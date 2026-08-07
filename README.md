@@ -1,11 +1,21 @@
 # pi-dont-change-my-defaults
 
-Prevent Pi from persisting model, provider, and thinking-level changes as defaults
+Prevent Pi from persisting model, provider, and thinking-level changes as defaults.
 
-This is a Pi package. Its extension entrypoint is:
+Selecting a model or thinking level still changes the current session. This extension only prevents
+Pi from writing those choices back as defaults for future sessions. Other settings continue to
+persist normally.
 
-```txt
-extensions/pi-dont-change-my-defaults/index.ts
+## Install
+
+```bash
+pi install npm:pi-dont-change-my-defaults
+```
+
+To try it for one invocation without installing it:
+
+```bash
+pi -e npm:pi-dont-change-my-defaults
 ```
 
 ## Development
@@ -17,10 +27,10 @@ npm test
 npm run pack:dry
 ```
 
-## Try locally
+The extension entrypoint is:
 
-```bash
-pi -e ./extensions/pi-dont-change-my-defaults/index.ts
+```txt
+extensions/pi-dont-change-my-defaults/index.ts
 ```
 
 ## Release staging
