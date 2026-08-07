@@ -30,7 +30,7 @@ npm run pack:dry
 The extension entrypoint is:
 
 ```txt
-extensions/pi-dont-change-my-defaults/index.ts
+extensions/index.ts
 ```
 
 ## Release staging

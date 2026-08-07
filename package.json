@@ -20,7 +20,7 @@
     "url": "git+https://github.com/2h2d-co/pi-dont-change-my-defaults.git"
   },
   "files": [
-    "extensions/pi-dont-change-my-defaults/index.ts",
+    "extensions/index.ts",
     "README.md",
     "CHANGELOG.md",
     "LICENSE"
@@ -50,7 +50,7 @@
   },
   "pi": {
     "extensions": [
-      "./extensions/pi-dont-change-my-defaults/index.ts"
+      "./extensions/index.ts"
     ]
   }
 }
