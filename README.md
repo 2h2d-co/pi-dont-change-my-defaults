@@ -1,0 +1,28 @@
+# pi-dont-change-my-defaults
+
+Prevent Pi from persisting model, provider, and thinking-level changes as defaults
+
+This is a Pi package. Its extension entrypoint is:
+
+```txt
+extensions/pi-dont-change-my-defaults/index.ts
+```
+
+## Development
+
+```bash
+npm install
+npm run check
+npm test
+npm run pack:dry
+```
+
+## Try locally
+
+```bash
+pi -e ./extensions/pi-dont-change-my-defaults/index.ts
+```
+
+## Release staging
+
+The GitHub Actions workflow stages npm releases when a `v*` tag is pushed. The tag must match the `package.json` version, point at a commit whose subject is `release: v<version>`, and be a lightweight tag. Create it with `git tag v<version>`; do not use `git tag -a`, `git tag -s`, `git tag -m`, or `cog bump --annotated`.
