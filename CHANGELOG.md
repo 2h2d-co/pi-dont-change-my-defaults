@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+### Changed
+
+- Adopt the shared 2h2d Oxlint policy, including the blanket ban on non-const type assertions.
+
 ### Security
 
 - Require npm releases to match a locally built SHA-256 recorded in an SSH-signed release commit before trusted publishing can stage the package.

@@ -4,14 +4,15 @@ import { SettingsManager } from "@earendil-works/pi-coding-agent";
 import extension from "../extensions/index.ts";
 
 void test("prevents default model settings from being changed", () => {
-  const settings = SettingsManager.prototype;
   extension();
 
-  const receiver = {} as SettingsManager;
+  const receiver = SettingsManager.inMemory();
 
-  assert.equal(settings.setDefaultModelAndProvider.call(receiver, "provider", "model"), undefined);
-  assert.equal(settings.setDefaultModel.call(receiver, "model"), undefined);
-  assert.equal(settings.setDefaultProvider.call(receiver, "provider"), undefined);
-  assert.equal(settings.setDefaultThinkingLevel.call(receiver, "high"), undefined);
-  assert.deepEqual(receiver, {});
+  assert.equal(receiver.setDefaultModelAndProvider("provider", "model"), undefined);
+  assert.equal(receiver.setDefaultModel("model"), undefined);
+  assert.equal(receiver.setDefaultProvider("provider"), undefined);
+  assert.equal(receiver.setDefaultThinkingLevel("high"), undefined);
+  assert.equal(receiver.getDefaultProvider(), undefined);
+  assert.equal(receiver.getDefaultModel(), undefined);
+  assert.equal(receiver.getDefaultThinkingLevel(), undefined);
 });
