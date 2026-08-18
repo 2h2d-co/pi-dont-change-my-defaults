@@ -3,7 +3,7 @@ import test from "node:test";
 import { SettingsManager } from "@earendil-works/pi-coding-agent";
 import extension from "../extensions/index.ts";
 
-void test("prevents default model settings from being changed", () => {
+test("prevents default model settings from being changed", () => {
   extension();
 
   const receiver = SettingsManager.inMemory();
