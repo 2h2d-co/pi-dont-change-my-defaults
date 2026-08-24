@@ -6,6 +6,17 @@ Selecting a model or thinking level still changes the current session. This exte
 Pi from writing those choices back as defaults for future sessions. Other settings continue to
 persist normally.
 
+## Pi 0.84.3 and newer
+
+Pi 0.84.3 provides this behavior natively: model and thinking-level selections are session-only
+unless you explicitly save them as defaults with Ctrl+S.
+
+This extension is only compatible with Pi 0.83.0 through 0.84.2. On Pi 0.84.3 or newer, remove it:
+
+```bash
+pi remove npm:pi-dont-change-my-defaults
+```
+
 ## Install
 
 ```bash
