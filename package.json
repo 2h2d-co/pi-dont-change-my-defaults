@@ -1,6 +1,6 @@
 {
   "name": "pi-dont-change-my-defaults",
-  "version": "0.0.3-alpha.0",
+  "version": "0.0.3",
   "description": "Prevent Pi from persisting model, provider, and thinking-level changes as defaults",
   "keywords": [
     "pi-package"
