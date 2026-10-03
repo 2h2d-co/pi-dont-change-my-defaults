@@ -34,7 +34,10 @@ jobs:
         run: npm ci --ignore-scripts
 
       - name: Audit dependencies
-        run: npm audit
+        # Pi 0.84.2's npm-shrinkwrap pins brace-expansion 5.0.9 and undici 8.9.0 in the Pi
+        # development dependency. No Pi release in this extension's supported range fixes them, and
+        # the published package has no dependencies, so audit production dependencies only.
+        run: npm audit --omit=dev
 
       - name: Check
         run: npm run check
