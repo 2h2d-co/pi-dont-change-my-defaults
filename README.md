@@ -1,5 +1,9 @@
 # pi-dont-change-my-defaults
 
+> **Retired.** Pi 0.84.3 and newer provide this behavior natively. The npm package is
+> deprecated and this repository is archived. Remove the package with
+> `pi remove npm:pi-dont-change-my-defaults`.
+
 Prevent Pi from persisting model, provider, and thinking-level changes as defaults.
 
 Selecting a model or thinking level still changes the current session. This extension only prevents
